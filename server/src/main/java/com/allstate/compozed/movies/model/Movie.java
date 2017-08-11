@@ -1,11 +1,12 @@
 package com.allstate.compozed.movies.model;
 
-import javax.annotation.sql.DataSourceDefinition;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
 @NoArgsConstructor
-@AllArgsConstructor
 public class Movie {
 
 }

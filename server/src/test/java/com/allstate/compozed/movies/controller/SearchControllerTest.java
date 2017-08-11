@@ -1,5 +1,7 @@
 package com.allstate.compozed.movies.controller;
 
+import com.allstate.compozed.movies.model.SearchResponse;
+import com.allstate.compozed.movies.service.SearchMovieService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,6 +10,7 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -33,7 +36,7 @@ public class SearchControllerTest {
 
     @Test
     public void getMovieStringQueryAndReturnAMovieList() throws Exception {
-        SearchResponse searchResponse = SearchResponse.build().build();
+        SearchResponse searchResponse = SearchResponse.builder().build();
 
         when(searchMovieService.getMovieList(any(String.class))).thenReturn(searchResponse);
 

@@ -1,9 +1,13 @@
 package com.allstate.compozed.movies.model;
 
-import javax.annotation.sql.DataSourceDefinition;
+import lombok.Builder;
+import lombok.Data;
+
+import java.util.List;
+
 
 @Data
 @Builder
 public class SearchResponse {
-    private List<Movies> movies;
+    private List<Movie> movies;
 }
